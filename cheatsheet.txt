@@ -1,10 +1,10 @@
 #Using AWS SAM locally using Docker
->> Cd ….
+>> Cd â€¦.
 >> docker-machine env --shell cmd default
 >> @for /f "tokens=*" %i IN ('docker-machine env --shell cmd default') DO @%i
 >> sam local start-api
 
-#An example url for list metrics on graphite(db)
+#An example url for listing metrics on graphite(db)
 https://metrics-influxdb-monitor-compass.int.thomsonreuters.com/metrics/find?query=production.amers.b00717.tseleinter.ets_eapp.*.InterdayRESTWS.*.resp.*
 
 #Date/Time syntax for graphite/render API (params=from&to)
