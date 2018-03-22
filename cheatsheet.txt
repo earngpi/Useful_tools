@@ -1,0 +1,6 @@
+>> Cd ….
+>> docker-machine env --shell cmd default
+>> @for /f "tokens=*" %i IN ('docker-machine env --shell cmd default') DO @%i
+>> sam local start-api
+
+https://metrics-influxdb-monitor-compass.int.thomsonreuters.com/metrics/find?query=production.amers.b00717.tseleinter.ets_eapp.*.InterdayRESTWS.*.resp.*
