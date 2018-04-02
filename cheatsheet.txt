@@ -9,3 +9,24 @@ https://metrics-influxdb-monitor-compass.int.thomsonreuters.com/metrics/find?que
 
 #Date/Time syntax for graphite/render API (params=from&to)
 %H:%M%Y%m%d
+
+#ES range filtering
+{
+    "query": {
+        "range" : {
+            "age" : {
+                "gte" : 10,
+                "lte" : 20,
+                "boost" : 2.0
+            }
+        }
+    }
+}
+
+#Numpy simple stats
+avg = numpy.average(sourceList)
+med = numpy.median(sourceList)
+std = numpy.std(sourceList, ddof=1) #ddof=1 for sample stdev
+
+#Pandas e.g usage
+tweet = pandas.read_csv("../data/thai_twitter.txt", delimiter='|', header=None, names=['tweet_id', 'date', 'account', 'text', 'sentiment'])
